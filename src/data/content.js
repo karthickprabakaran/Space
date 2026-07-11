@@ -6,7 +6,7 @@ export const profile = {
   tagline: 'Curiosity-driven engineer building software that feels alive.',
   location: 'Chennai, India',
   status: 'Engineering @ SurveySparrow',
-  email: 'karthickop6@gmail.com',
+  email: 'karthickprabakaran06@gmail.com',
   bio: [
     '"Every invention starts with the curiosity to understand how things work." That one question pulled me into computers — and I never left. I\'m the engineer who gets genuinely excited by a gnarly problem and isn\'t afraid to own it, even if that means debugging on a Friday night.',
     'The scoreboard so far: 7+ client projects shipped at a 100% completion rate, lifting business metrics by up to 18%, with clients across Europe and India. From BERT-powered NLP pipelines to pixel-perfect React frontends, I don\'t just pick a stack — I hunt for the right tool for every problem.',
