@@ -66,13 +66,11 @@ export default function Dock() {
         }
         .dock-item:hover {
           background: var(--accent-soft);
-          color: var(--accent-2);
+          color: var(--accent);
           transform: translateY(-6px) scale(1.08);
-          text-shadow: 0 0 12px rgba(79, 209, 255, 0.7);
         }
         .dock-item.active {
-          color: var(--accent-2);
-          text-shadow: 0 0 12px rgba(79, 209, 255, 0.7);
+          color: var(--accent);
         }
         .dock-indicator {
           position: absolute;
@@ -80,8 +78,8 @@ export default function Dock() {
           width: 4px;
           height: 4px;
           border-radius: 50%;
-          background: var(--accent-2);
-          box-shadow: 0 0 6px var(--accent-2);
+          background: var(--accent-warm);
+          box-shadow: 0 0 6px var(--accent-warm);
           opacity: 0;
           transition: opacity 0.3s var(--ease);
         }
@@ -91,7 +89,7 @@ export default function Dock() {
           top: -38px;
           padding: 4px 10px;
           border-radius: 8px;
-          background: rgba(20, 24, 46, 0.95);
+          background: rgba(255, 253, 246, 0.96);
           border: 1px solid var(--border);
           color: var(--text);
           font-size: 11px;
@@ -101,6 +99,7 @@ export default function Dock() {
           pointer-events: none;
           transform: translateY(4px);
           transition: all 0.25s var(--ease);
+          box-shadow: var(--shadow-sm);
         }
         .dock-item:hover .dock-tooltip {
           opacity: 1;

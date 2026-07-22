@@ -1,9 +1,8 @@
 import { useRef } from 'react'
 import { projects } from '../data/content.js'
 
-/* Work section — yasio.dev style:
-   big typographic tiles, spinning orbital badge, index + arrow,
-   details revealed on hover. */
+/* Work section — big typographic tiles, spinning field-notes badge,
+   index + arrow, details revealed on hover. */
 
 function SpinBadge({ accent }) {
   return (
@@ -14,7 +13,7 @@ function SpinBadge({ accent }) {
         </defs>
         <text>
           <textPath href="#circlePath" startOffset="0">
-            MISSION LOG · ORBIT · MISSION LOG · ORBIT ·
+            FIELD NOTES · HARVEST · FIELD NOTES · HARVEST ·
           </textPath>
         </text>
       </svg>
@@ -76,33 +75,60 @@ function WorkTile({ p, index }) {
             <code key={t}>{t}</code>
           ))}
         </div>
-        <span className="work-overlay-cta">View mission log →</span>
+        <span className="work-overlay-cta">See the work →</span>
       </div>
     </a>
   )
 }
 
+/* Footage: "Aerial View of Serene River and Forest Landscape" by K (Pexels, free to use) */
+const VIDEO = 'https://videos.pexels.com/video-files/38105818/16179183_2560_1440_24fps.mp4'
+const POSTER = 'https://images.pexels.com/videos/38105818/pexels-photo-38105818.jpeg?auto=compress&cs=tinysrgb&w=1920'
+
 export default function Projects() {
   return (
-    <section id="projects" className="section work-section">
-      <div className="section-header reveal">
-        <span className="mono-label">03 · Mission Log</span>
-        <h2>Work /&gt;</h2>
-        <p>Selected web, mobile, and product missions…</p>
-      </div>
+    <section id="projects" className="work-scape">
+      <video src={VIDEO} poster={POSTER} autoPlay muted loop playsInline preload="metadata" aria-hidden="true" />
+      <div className="work-scrim" />
 
-      <div className="work-grid">
-        {projects.map((p, i) => (
-          <WorkTile key={p.id} p={p} index={i} />
-        ))}
+      <div className="section work-section work-inner">
+        <div className="section-header reveal">
+          <span className="mono-label work-label">03 · The Harvest</span>
+          <h2 className="work-h2">The harvest.</h2>
+          <p className="work-p">Selected work — websites, web apps, and AI systems, each tended end-to-end.</p>
+        </div>
+
+        <div className="work-grid">
+          {projects.map((p, i) => (
+            <WorkTile key={p.id} p={p} index={i} />
+          ))}
+        </div>
       </div>
 
       <style>{`
-        .work-section .section-header h2 {
-          font-family: var(--font-mono);
-          font-weight: 500;
-          letter-spacing: -0.01em;
+        .work-scape {
+          position: relative;
+          overflow: hidden;
         }
+        .work-scape > video {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .work-scrim {
+          position: absolute;
+          inset: 0;
+          background:
+            linear-gradient(rgba(16, 24, 18, 0.55), rgba(16, 24, 18, 0.55)),
+            radial-gradient(ellipse 80% 60% at 50% 40%, rgba(16, 24, 18, 0.12), rgba(16, 24, 18, 0.4));
+        }
+        .work-inner { position: relative; z-index: 1; }
+        .work-label { color: #ffd98e !important; text-shadow: 0 1px 10px rgba(10, 14, 10, 0.8); }
+        .section-header h2.work-h2 { color: #ffffff !important; text-shadow: 0 2px 20px rgba(10, 14, 10, 0.8); }
+        .work-p { color: #e9eee1 !important; text-shadow: 0 1px 12px rgba(10, 14, 10, 0.85); }
+
         /* Gallery layout — irregular, staggered, asymmetric */
         .work-grid {
           display: grid;
@@ -124,19 +150,22 @@ export default function Projects() {
           padding: 26px 28px;
           will-change: transform;
           border-radius: var(--radius-lg);
-          border: 1px solid var(--border);
+          border: 1px solid rgba(255, 255, 255, 0.7);
           background:
-            radial-gradient(ellipse 90% 80% at 80% 110%, color-mix(in srgb, var(--tile-accent) 10%, transparent), transparent),
-            rgba(10, 12, 26, 0.55);
+            radial-gradient(ellipse 90% 80% at 80% 110%, color-mix(in srgb, var(--tile-accent) 12%, transparent), transparent),
+            rgba(255, 255, 252, 0.88);
+          backdrop-filter: blur(18px) saturate(1.2);
+          -webkit-backdrop-filter: blur(18px) saturate(1.2);
           overflow: hidden;
+          box-shadow: var(--shadow-sm);
           transition: transform 0.5s var(--ease), border-color 0.5s var(--ease), box-shadow 0.5s var(--ease);
         }
         .work-tile:hover {
           transform: translateY(-6px);
           border-color: color-mix(in srgb, var(--tile-accent) 55%, transparent);
           box-shadow:
-            0 24px 60px rgba(0, 0, 0, 0.5),
-            0 0 40px color-mix(in srgb, var(--tile-accent) 18%, transparent);
+            var(--shadow-lg),
+            0 0 40px color-mix(in srgb, var(--tile-accent) 20%, transparent);
         }
 
         .work-tile-top {
@@ -162,8 +191,8 @@ export default function Projects() {
           font-family: var(--font-mono);
           font-size: 10.5px;
           letter-spacing: 0.22em;
-          fill: color-mix(in srgb, var(--tile-accent) 75%, #ffffff);
-          opacity: 0.75;
+          fill: color-mix(in srgb, var(--tile-accent) 55%, #1c261d);
+          opacity: 1;
         }
         .spin-dot {
           position: absolute;
@@ -208,12 +237,12 @@ export default function Projects() {
           font-size: clamp(30px, 4.2vw, 46px);
           font-weight: 700;
           line-height: 1.04;
-          letter-spacing: -0.02em;
+          letter-spacing: -0.01em;
           color: var(--text);
           transition: transform 0.5s var(--ease), color 0.4s var(--ease);
         }
         .work-tile:hover .work-title-word {
-          color: var(--tile-accent);
+          color: color-mix(in srgb, var(--tile-accent) 80%, #2c3a2e);
           transform: translateX(8px);
         }
         .work-tile:hover .work-title-line:nth-child(2) .work-title-word { transition-delay: 0.04s; }
@@ -232,7 +261,7 @@ export default function Projects() {
           position: absolute;
           inset: auto 0 0 0;
           padding: 24px 28px;
-          background: linear-gradient(transparent, rgba(5, 6, 15, 0.92) 30%);
+          background: linear-gradient(transparent, rgba(255, 253, 248, 0.98) 30%);
           backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
           transform: translateY(100%);
@@ -241,7 +270,7 @@ export default function Projects() {
         .work-tile:hover .work-overlay { transform: translateY(0); }
         .work-overlay p {
           font-size: 13.5px;
-          color: var(--text-secondary);
+          color: #37432f;
           margin-bottom: 14px;
         }
         .work-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
@@ -250,14 +279,14 @@ export default function Projects() {
           font-size: 10.5px;
           padding: 3px 9px;
           border-radius: 6px;
-          background: rgba(20, 24, 46, 0.8);
+          background: rgba(244, 239, 228, 0.9);
           border: 1px solid var(--border);
           color: var(--text-secondary);
         }
         .work-overlay-cta {
           font-size: 13px;
           font-weight: 500;
-          color: var(--tile-accent);
+          color: color-mix(in srgb, var(--tile-accent) 80%, #2c3a2e);
         }
 
         @media (max-width: 860px) {

@@ -2,15 +2,15 @@
 
 export const profile = {
   name: 'Karthick Prabakaran',
-  role: 'Software Engineer @ SurveySparrow',
+  role: 'Full-Stack Software Engineer',
   tagline: 'Curiosity-driven engineer building software that feels alive.',
   location: 'Chennai, India',
-  status: 'Engineering @ SurveySparrow',
-  email: 'karthickprabakaran06@gmail.com',
+  status: 'Open to select projects',
+  email: 'karthickop6@gmail.com',
   bio: [
     '"Every invention starts with the curiosity to understand how things work." That one question pulled me into computers — and I never left. I\'m the engineer who gets genuinely excited by a gnarly problem and isn\'t afraid to own it, even if that means debugging on a Friday night.',
-    'The scoreboard so far: 7+ client projects shipped at a 100% completion rate, lifting business metrics by up to 18%, with clients across Europe and India. From BERT-powered NLP pipelines to pixel-perfect React frontends, I don\'t just pick a stack — I hunt for the right tool for every problem.',
-    'Off the keyboard, I\'ve been Technical Advisor to a tech society of 800+ students and organized the Hack Hustle 2024 hackathon — because good ideas are meant to be shared.',
+    'I\'ve shipped 7+ client projects at a 100% completion rate, lifting business metrics by up to 18% for clients across Europe and India — each taken end-to-end, from the first mockup to a fast, SEO-friendly site in production. I don\'t just pick a stack — I hunt for the right tool for every problem.',
+    'By day, I engineer at SurveySparrow, a SaaS platform used by teams worldwide. Off the keyboard, I\'ve mentored a tech community of 800+ students and organized the Hack Hustle 2024 hackathon.',
   ],
   socials: [
     { label: 'GitHub', url: 'https://github.com/karthickop6' },
@@ -52,7 +52,7 @@ export const projects = [
     description:
       'BERT-based hierarchical model that auto-classifies support tickets into two-level categories (Finance → Refund) — cutting manual triage and speeding up response times at serviceMob. Deployed on AWS with Athena-powered pipelines.',
     stack: ['Python', 'BERT', 'AWS Athena', 'Prompt Engineering'],
-    accent: '#7C8CFF',
+    accent: '#3f7d4e',
     link: '#',
   },
   {
@@ -63,7 +63,7 @@ export const projects = [
     description:
       'End-to-end freelance build — from Figma mockups to a fully responsive, performance-optimized, SEO-friendly site for a sports academy. One of 7+ client projects delivered at a 100% completion rate.',
     stack: ['React', 'Node.js', 'Figma', 'SEO'],
-    accent: '#34D399',
+    accent: '#e3a24f',
     link: 'https://acetabletennisacademy.in',
   },
   {
@@ -74,7 +74,7 @@ export const projects = [
     description:
       'Custom business website engineered for speed and search visibility — responsive across devices with a clean, conversion-focused UX. Part of a freelance portfolio that lifted client metrics by up to 18%.',
     stack: ['React', 'JavaScript', 'Express', 'SEO'],
-    accent: '#FFB45E',
+    accent: '#b96a4b',
     link: 'https://sprtraders.com',
   },
   {
@@ -85,7 +85,7 @@ export const projects = [
     description:
       'Freelance build taken from design mockup to production — mobile-ready, performance-optimized, and SEO-friendly, tailored to client-specific business needs.',
     stack: ['React', 'Node.js', 'Responsive UI', 'SEO'],
-    accent: '#4FD1FF',
+    accent: '#4a8fb8',
     link: 'https://srijaishanthi.com',
   },
   {
@@ -96,7 +96,7 @@ export const projects = [
     description:
       'Built and shipped 4 client websites at Desperately Cinema — spectale.in, bioscholar.in, hassanacademia.com, ayandesignstudio.in — with responsive UIs from Figma, API integrations, and on-page SEO.',
     stack: ['HTML5 / CSS3', 'JavaScript', 'PHP', 'CMS'],
-    accent: '#F472B6',
+    accent: '#8e7cc3',
     link: 'https://spectale.in',
   },
   {
@@ -107,7 +107,7 @@ export const projects = [
     description:
       'Organized a hackathon for a tech society of 800+ students as Technical Advisor — steering themes, judging criteria, and mentorship across Web Dev, AI/ML, Cybersecurity, and more.',
     stack: ['Leadership', 'Mentorship', 'Event Ops', '5 Tech Domains'],
-    accent: '#A78BFA',
+    accent: '#7fa653',
     link: '#',
   },
 ]

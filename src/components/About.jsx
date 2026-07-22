@@ -5,19 +5,19 @@ export default function About() {
   return (
     <section id="about" className="section">
       <div className="section-header reveal">
-        <span className="mono-label">01 · Crew Manifest</span>
+        <span className="mono-label">01 · The Farmhouse</span>
         <h2>An engineer who ships,<br />and designs when it counts.</h2>
       </div>
 
       <div className="about-grid">
-        <HUDPanel title="crew/about.log" className="about-main">
+        <HUDPanel title="journal/evening-notes.md" className="about-main">
           {profile.bio.map((p, i) => (
             <p key={i} className="about-para">{p}</p>
           ))}
           <div className="about-stats">
             <div className="stat">
               <span className="stat-num">7+</span>
-              <span className="stat-label">Missions shipped</span>
+              <span className="stat-label">Client projects</span>
             </div>
             <div className="stat">
               <span className="stat-num">100%</span>
@@ -25,12 +25,12 @@ export default function About() {
             </div>
             <div className="stat">
               <span className="stat-num">800+</span>
-              <span className="stat-label">Crew mentored</span>
+              <span className="stat-label">Students mentored</span>
             </div>
           </div>
         </HUDPanel>
 
-        <HUDPanel title="flight-rules.json" className="about-side">
+        <HUDPanel title="trail-rules.json" className="about-side">
           <ul className="principles">
             <li><span>01</span>Right tool for the job</li>
             <li><span>02</span>Own it end-to-end</li>
@@ -61,10 +61,7 @@ export default function About() {
           font-family: var(--font-heading);
           font-size: 30px;
           font-weight: 700;
-          background: linear-gradient(120deg, var(--accent), var(--accent-2));
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
+          color: var(--accent);
         }
         .stat-label { font-size: 12.5px; color: var(--text-secondary); margin-top: 2px; }
         .principles { list-style: none; display: flex; flex-direction: column; gap: 18px; }
@@ -79,7 +76,7 @@ export default function About() {
         .principles li span {
           font-family: var(--font-mono);
           font-size: 11px;
-          color: var(--accent-2);
+          color: var(--accent-warm);
         }
         @media (max-width: 860px) {
           .about-grid { grid-template-columns: 1fr; }

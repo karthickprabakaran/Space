@@ -4,8 +4,8 @@ export default function Experience() {
   return (
     <section id="experience" className="section">
       <div className="section-header reveal">
-        <span className="mono-label">04 · Flight Path</span>
-        <h2>The trajectory.</h2>
+        <span className="mono-label">04 · The Trail</span>
+        <h2>The trail so far.</h2>
       </div>
 
       <div className="timeline">
@@ -51,14 +51,14 @@ export default function Experience() {
           height: 12px;
           border-radius: 50%;
           background: var(--bg);
-          border: 3px solid var(--accent-2);
-          box-shadow: 0 0 12px rgba(79, 209, 255, 0.6), 0 0 0 4px rgba(79, 209, 255, 0.1);
+          border: 3px solid var(--accent);
+          box-shadow: 0 0 12px rgba(63, 125, 78, 0.4), 0 0 0 4px rgba(63, 125, 78, 0.1);
           flex-shrink: 0;
         }
         .timeline-line {
           width: 1.5px;
           flex: 1;
-          background: linear-gradient(var(--accent-2), var(--border));
+          background: linear-gradient(var(--accent), var(--border));
           margin: 8px 0;
           opacity: 0.4;
         }
@@ -72,7 +72,7 @@ export default function Experience() {
         .timeline-card:hover {
           transform: translateX(6px);
           box-shadow: var(--shadow-md), var(--glow-accent);
-          border-color: var(--border-bright);
+          border-color: rgba(227, 162, 79, 0.45);
         }
         .timeline-head {
           display: flex;
@@ -82,12 +82,12 @@ export default function Experience() {
           margin-bottom: 14px;
         }
         .timeline-head h3 { font-size: 18px; }
-        .timeline-company { color: var(--accent-2); font-size: 14px; font-weight: 500; }
+        .timeline-company { color: var(--accent); font-size: 14px; font-weight: 500; }
         .timeline-period {
           font-family: var(--font-mono);
           font-size: 12px;
           color: var(--text-secondary);
-          background: rgba(20, 24, 46, 0.6);
+          background: rgba(255, 253, 248, 0.92);
           border: 1px solid var(--border);
           padding: 4px 10px;
           border-radius: 7px;
@@ -96,7 +96,7 @@ export default function Experience() {
         .timeline-card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
         .timeline-card li {
           font-size: 14.5px;
-          color: var(--text-secondary);
+          color: #3d4a3a;
           padding-left: 18px;
           position: relative;
         }
@@ -104,7 +104,7 @@ export default function Experience() {
           content: '›';
           position: absolute;
           left: 0;
-          color: var(--accent-2);
+          color: var(--accent-warm);
         }
       `}</style>
     </section>

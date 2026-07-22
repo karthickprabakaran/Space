@@ -16,7 +16,7 @@ export default function CommandPalette({ open, onClose }) {
         run: () => document.getElementById(n.id)?.scrollIntoView({ behavior: 'smooth' }),
       })),
       ...projects.map((p) => ({
-        group: 'Missions',
+        group: 'Work',
         label: p.name,
         icon: '▣',
         run: () => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }),
@@ -131,7 +131,7 @@ export default function CommandPalette({ open, onClose }) {
               position: fixed;
               inset: 0;
               z-index: 200;
-              background: rgba(2, 3, 8, 0.55);
+              background: rgba(72, 62, 40, 0.3);
               backdrop-filter: blur(8px);
               -webkit-backdrop-filter: blur(8px);
               display: flex;
@@ -186,7 +186,7 @@ export default function CommandPalette({ open, onClose }) {
               transition: background 0.15s ease;
             }
             .palette-item.selected { background: var(--accent-soft); }
-            .palette-item-icon { color: var(--accent-2); width: 20px; text-align: center; }
+            .palette-item-icon { color: var(--accent); width: 20px; text-align: center; }
             .palette-item-group {
               margin-left: auto;
               font-family: var(--font-mono);

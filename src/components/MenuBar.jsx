@@ -12,10 +12,10 @@ export default function MenuBar({ onOpenPalette }) {
   return (
     <header className="menubar glass">
       <div className="menubar-left">
-        <span className="menubar-logo">✦</span>
+        <span className="menubar-logo">△</span>
         <span className="menubar-name">{profile.name}</span>
         <span className="menubar-sep">/</span>
-        <span className="menubar-role">Mission Control</span>
+        <span className="menubar-role">The Farmhouse</span>
       </div>
       <div className="menubar-right">
         <button className="menubar-cmd" onClick={onOpenPalette} aria-label="Open command palette">
@@ -27,7 +27,7 @@ export default function MenuBar({ onOpenPalette }) {
           {profile.status}
         </span>
         <span className="menubar-clock">
-          {time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} UTC+5:30
+          {time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} IST
         </span>
       </div>
 
@@ -54,9 +54,9 @@ export default function MenuBar({ onOpenPalette }) {
           gap: 12px;
         }
         .menubar-logo {
-          color: var(--accent-2);
+          color: var(--accent);
           font-size: 15px;
-          filter: drop-shadow(0 0 6px rgba(79, 209, 255, 0.6));
+          filter: drop-shadow(0 0 6px rgba(63, 125, 78, 0.5));
         }
         .menubar-name { font-weight: 600; font-family: var(--font-heading); color: var(--text); }
         .menubar-sep { color: var(--border-bright); }
@@ -68,7 +68,7 @@ export default function MenuBar({ onOpenPalette }) {
           padding: 5px 12px;
           border-radius: 8px;
           border: 1px solid var(--border);
-          background: rgba(20, 24, 46, 0.6);
+          background: rgba(255, 253, 248, 0.92);
           color: var(--text-secondary);
           font-size: 12px;
           transition: all 0.25s var(--ease);
@@ -76,12 +76,12 @@ export default function MenuBar({ onOpenPalette }) {
         .menubar-cmd:hover {
           border-color: var(--accent);
           color: var(--accent);
-          box-shadow: 0 0 12px rgba(124, 140, 255, 0.2);
+          box-shadow: 0 0 12px rgba(63, 125, 78, 0.18);
         }
         .menubar-cmd kbd {
           font-family: var(--font-mono);
           font-size: 10px;
-          background: rgba(10, 12, 26, 0.8);
+          background: rgba(244, 239, 228, 0.9);
           border: 1px solid var(--border);
           border-radius: 5px;
           padding: 1px 5px;
@@ -97,13 +97,13 @@ export default function MenuBar({ onOpenPalette }) {
           width: 7px;
           height: 7px;
           border-radius: 50%;
-          background: #34d399;
-          box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.15), 0 0 8px rgba(52, 211, 153, 0.6);
+          background: #3f7d4e;
+          box-shadow: 0 0 0 3px rgba(63, 125, 78, 0.15), 0 0 8px rgba(63, 125, 78, 0.5);
           animation: pulse 2.4s ease-in-out infinite;
         }
         @keyframes pulse {
-          0%, 100% { box-shadow: 0 0 0 3px rgba(52,211,153,0.15), 0 0 8px rgba(52,211,153,0.6); }
-          50% { box-shadow: 0 0 0 6px rgba(52,211,153,0.05), 0 0 12px rgba(52,211,153,0.8); }
+          0%, 100% { box-shadow: 0 0 0 3px rgba(63,125,78,0.15), 0 0 8px rgba(63,125,78,0.5); }
+          50% { box-shadow: 0 0 0 6px rgba(63,125,78,0.05), 0 0 12px rgba(63,125,78,0.7); }
         }
         .menubar-clock { font-family: var(--font-mono); font-size: 12px; color: var(--text-secondary); }
         @media (max-width: 720px) {

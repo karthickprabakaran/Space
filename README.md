@@ -1,32 +1,27 @@
-# Space Portfolio — Mission Control
+# Alpine Portfolio — Karthick Prabakaran
 
-Dark, space-themed edition of the Portfolio OS. Same content, new universe: an animated 3D solar system hero (sun, five orbiting planets, Saturn rings, a moon, shooting stars), a drifting CSS starfield behind every section, and mission-control HUD panels instead of glass windows.
+A portfolio themed around Swiss mountains, meadows, and the peace at the end of a day —
+low-poly 3D valley (Three.js), frosted acrylic panels, drifting clouds, and a farmhouse
+with one warm window.
 
 ## Run it
 
 ```bash
 npm install
-npm run dev      # local dev server
-npm run build    # production build → dist/
+npm run dev
 ```
 
-## Customize
+## Build
 
-All content lives in one file: `src/data/content.js` — name, bio, skills, projects, experience, socials.
+```bash
+npm run build
+```
 
-Design tokens (colors, fonts, radii, glows) are in `src/index.css` under `:root`.
+## Stack
 
-Solar system tuning (planet sizes, orbit radii, speeds, colors) is in `src/components/SolarSystem.jsx` — each `<Planet>` takes `radius`, `size`, `speed`, `color`, plus optional `hasRing` / `hasMoon`.
+- React + Vite
+- @react-three/fiber + drei (3D valley scene)
+- Framer Motion (entrance animations)
+- CSS glass/acrylic + scroll reveals
 
-## Structure
-
-- `src/components/SolarSystem.jsx` — react-three-fiber solar system (lazy-loaded)
-- `src/components/MenuBar.jsx` — mission-control top bar with live clock
-- `src/components/Dock.jsx` — bottom dock navigation
-- `src/components/CommandPalette.jsx` — ⌘K palette
-- `src/components/HUDPanel.jsx` — reusable HUD window wrapper
-- `src/components/Hero|About|Skills|Projects|Experience|Contact.jsx` — sections
-
-## Deploy
-
-Works out of the box on Vercel, Netlify, or GitHub Pages (`npm run build`, serve `dist/`).
+Content lives in `src/data/content.js`.
