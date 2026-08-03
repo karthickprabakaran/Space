@@ -10,7 +10,7 @@ export const profile = {
   bio: [
     '"Every invention starts with the curiosity to understand how things work." That one question pulled me into computers — and I never left. I\'m the engineer who gets genuinely excited by a gnarly problem and isn\'t afraid to own it, even if that means debugging on a Friday night.',
     'I\'ve shipped 7+ client projects at a 100% completion rate, lifting business metrics by up to 18% for clients across Europe and India — each taken end-to-end, from the first mockup to a fast, SEO-friendly site in production. I don\'t just pick a stack — I hunt for the right tool for every problem.',
-    'By day, I engineer at SurveySparrow, a SaaS platform used by teams worldwide. Off the keyboard, I\'ve mentored a tech community of 800+ students and organized the Hack Hustle 2024 hackathon.',
+    'By day, I engineer at a startup, building a SaaS platform used by 300+ Organizations worldwide. Off the keyboard, I\'ve mentored a tech community of 800+ students and organized the Hack Hustle 2024 hackathon.',
   ],
   socials: [
     { label: 'GitHub', url: 'https://github.com/karthickop6' },
